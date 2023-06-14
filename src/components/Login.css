@@ -1,0 +1,163 @@
+main .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .login .content {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+} 
+
+main .login .content .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: var(--desk-h1);
+}
+
+main .login .content .logo span {
+    font-size: var(--desk-h1);
+    font-weight: 700;
+}
+
+main .login .content form {
+    display: grid;
+    gap: 1rem;
+}
+
+main .login .content form .inputEmail,
+main .login .content form .inputSenha {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+main .login .content form .inputEmail .error {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+}
+
+main .login .content form .inputEmail .msg {
+    margin: 0;
+    padding: 0rem .2rem;
+    font-size: var(--desk-sub);
+    color: var(--red);
+}
+
+main .login .content form .inputEmail .inativo {
+    display: none;
+}
+main .login .content form .inputEmail .ativo {
+    display: block;
+}
+
+main .login .content form .inputSenha {
+    position: relative;
+}
+
+main .login .content form .inputSenha .box {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .login .content form .inputSenha .box .esqueceuSenha{
+    cursor: pointer;
+    font-size: var(--desk-sub);
+    font-weight: bold;
+    color: var(--purple);
+}
+
+main .login .content form .inputSenha .passwordContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+main .login .content form .inputSenha .passwordContainer .inputBox{
+    width: 100%;
+}
+
+main .login .content form .inputSenha .passwordContainer .passwordIcon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+main .login .content form .inputEmail label,
+main .login .content form .inputSenha label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--desk-sub);
+    font-weight: 700;
+}
+
+main .login .content form .inputEmail input,
+main .login .content form .inputSenha input {
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    padding: 1rem 0.75rem;
+}
+
+main .login .content form .inputEmail input:hover,
+main .login .content form .inputSenha input:hover,
+main .login .content form .inputEmail input:focus,
+main .login .content form .inputSenha input:focus {
+    border: 1px solid var(--purple);
+    outline: none;
+}
+
+main .login .content form .inputEmail input:invalid,
+main .login .content form .inputSenha input:invalid {
+    border: 1px solid var(--red);
+}
+
+main .login .content form .inputEmail input:disabled,
+main .login .content form .inputSenha input:disabled {
+    border: 0;
+}
+
+main .login .content form .buttonEntrar {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--purple);
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+
+main .login .content form .buttonEntrar:hover {
+    background-color: #9F67FF;
+}
+
+main .login .content p .destaque {
+    font-weight: 700;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+main .login .content p .destaque:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    main .capa .imagem {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/fundo.png");
+        background-size: cover;
+    }
+}
